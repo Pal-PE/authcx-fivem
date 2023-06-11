@@ -31,7 +31,7 @@ end
 -- Event triggered when a player joins the server
 AddEventHandler("playerConnecting", function(name, setKickReason, deferrals)
     local src = source
-    local identifiers = GetPlayerIdentifiers(src) -- Assuming the first identifier is the Steam ID
+    local identifiers = GetPlayerIdentifiers(src)
     deferrals.defer()
     deferrals.update("Contacting AuthCx API..")
     Citizen.Wait(1000)
